@@ -556,7 +556,7 @@ footer {
       <span class="eyebrow">Now in Beta</span>
       <h1>Read more.<br>Retain <em>what matters.</em></h1>
       <p class="hero-sub">
-        You spend hours reading. Most of it fades within a week. Recall gives you a companion for every book - a quiet space to reflect, discuss ideas, and carry the best of what you read into everyday life.
+        You spend hours reading. Most of it fades within a week. Whether you're mid-book or in a slump, Recall gives you a low-pressure way back in. This is your companion for your reading - a quiet space to reflect, discuss ideas, and carry the best of what you read into everyday life.
       </p>
       <div class="hero-badges">
         <span class="badge">
@@ -574,7 +574,7 @@ footer {
       </div>
       <form class="waitlist-form" id="hero-form">
         <input class="email-input" type="email" placeholder="your@email.com" required id="hero-email" autocomplete="email">
-        <button class="btn" type="submit" id="hero-btn">Get Early Access</button>
+        <button class="btn" type="submit" id="hero-btn">Join Waitlist</button>
       </form>
       <div class="form-status" id="hero-status"></div>
       <p class="form-note" style="max-width:440px;">Your next great read is waiting.</p>
@@ -675,7 +675,7 @@ footer {
     <div class="cta-form-wrap">
       <form class="waitlist-form" id="cta-form">
         <input class="email-input" type="email" placeholder="your@email.com" required id="cta-email" autocomplete="email">
-        <button class="btn" type="submit" id="cta-btn">Get Early Access</button>
+        <button class="btn" type="submit" id="cta-btn">Join Waitlist</button>
       </form>
     </div>
     <div class="form-status" id="cta-status"></div>
@@ -788,7 +788,7 @@ function wireForm(formId, emailId, btnId, statusId) {
       status.textContent = "You're on the list. We'll be in touch when your spot is ready.";
     } else {
       btn.disabled = false;
-      btn.textContent = 'Get Early Access';
+      btn.textContent = 'Join Waitlist';
       status.className = 'form-status err';
       status.textContent = 'Something went wrong - try again or email us at hello@readingrecall.com';
     }

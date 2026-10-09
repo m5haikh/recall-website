@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Recall</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap">
+
+  <style>
+:root {
+  --cream: #FDF6EE;
+  --teal: #1A6B5A;
+  --teal-soft: #2A8870;
+  --sand: #E8C99A;
+  --ink: #1E1E1A;
+  --ink-mid: #5C5C55;
+  --ink-soft: #A0A090;
+  --rule: rgba(26,107,90,0.13);
+  --surface: #FFFFFF;
+  --font-d: 'DM Serif Display', Georgia, serif;
+  --font-b: 'DM Sans', system-ui, sans-serif;
+  --w: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #111110;
+    --teal: #2BA88A;
+    --teal-soft: #3CC4A2;
+    --sand: #C4A46A;
+    --ink: #EDEAE2;
+    --ink-mid: #9A9888;
+    --ink-soft: #5C5A50;
+    --rule: rgba(43,168,138,0.14);
+    --surface: #1A1918;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #111110;
+  --teal: #2BA88A;
+  --teal-soft: #3CC4A2;
+  --sand: #C4A46A;
+  --ink: #EDEAE2;
+  --ink-mid: #9A9888;
+  --ink-soft: #5C5A50;
+  --rule: rgba(43,168,138,0.14);
+  --surface: #1A1918;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-b);
+  font-size: 16px;
+  line-height: 1.75;
+  padding: 0 16px;
+}
+
+nav {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 28px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  font-family: var(--font-d);
+  font-size: 20px;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.nav-back {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: auto;
+  letter-spacing: 0.02em;
+}
+.nav-back:hover { color: var(--teal); }
+
+main {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding-block: 56px 96px;
+}
+
+.doc-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc-header h1 {
+  font-family: var(--font-d);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+.doc-intro {
+  background: var(--surface);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 24px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: var(--font-d);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--ink-mid);
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--teal-soft); }
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  text-align: left;
+  font-family: var(--font-b);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.5;
+}
+
+.faq-q:hover { color: var(--teal); }
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--ink-soft);
+  transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  color: var(--teal);
+}
+
+.faq-a {
+  display: none;
+  padding: 0 24px 20px;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-a {
+  display: block;
+}
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 32px 28px;
+}
+
+.contact-box h2 {
+  margin-bottom: 8px;
+}
+
+.contact-box p {
+  margin-bottom: 12px;
+}
+
+.contact-box .email-link {
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-top: 4px;
+}
+
+.contact-box .email-link:hover {
+  background: var(--teal-soft);
+  color: #fff;
+}
+
+footer {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+footer a { color: var(--ink-soft); text-decoration: none; }
+footer a:hover { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Recall</a>
+  <a class="nav-back" href="/">← Back to site</a>
+</nav>
+
+<main>
+  <div class="doc-header">
+    <h1>Support</h1>
+  </div>
+
+  <div class="doc-intro">
+    Recall is in early access. We're a small team and we read every message - if something isn't working or you have a question, just reach out.
+  </div>
+
+  <section>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How do I join the waitlist?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          Visit <a href="https://readingrecall.com">readingrecall.com</a> and enter your email. You'll hear from us as soon as early access opens.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          When will the app be available?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          Recall is currently in development. Waitlist members will be the first to know when the app launches on the App Store.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What does the Recall conversation feature do?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          After you read, Recall lets you have a conversation about what you just finished - your reactions, ideas that stood out, questions it raised. It helps you surface what mattered so it doesn't fade within a week.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Is my reading data private?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          Yes. We don't sell your personal data. Your books, notes, and reflections are yours. Read our full <a href="/privacy">Privacy Policy</a> for details on how we handle your data.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How do I delete my account or data?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <div class="faq-a">
+          Email us at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a> with your request and we'll process it within 30 days.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="contact-box">
+    <h2>Still need help?</h2>
+    <p>We're a small team and we read every message. Send us a note and we'll get back to you as soon as we can.</p>
+    <a class="email-link" href="mailto:hello@readingrecall.com">hello@readingrecall.com</a>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Mausum LLC. All rights reserved.</span>
+  <span><a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Use</a></span>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

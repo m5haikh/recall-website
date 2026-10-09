@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — Recall</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap">
+
+  <style>
+:root {
+  --cream: #FDF6EE;
+  --teal: #1A6B5A;
+  --teal-soft: #2A8870;
+  --sand: #E8C99A;
+  --ink: #1E1E1A;
+  --ink-mid: #5C5C55;
+  --ink-soft: #A0A090;
+  --rule: rgba(26,107,90,0.13);
+  --surface: #FFFFFF;
+  --font-d: 'DM Serif Display', Georgia, serif;
+  --font-b: 'DM Sans', system-ui, sans-serif;
+  --w: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #111110;
+    --teal: #2BA88A;
+    --teal-soft: #3CC4A2;
+    --sand: #C4A46A;
+    --ink: #EDEAE2;
+    --ink-mid: #9A9888;
+    --ink-soft: #5C5A50;
+    --rule: rgba(43,168,138,0.14);
+    --surface: #1A1918;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #111110;
+  --teal: #2BA88A;
+  --teal-soft: #3CC4A2;
+  --sand: #C4A46A;
+  --ink: #EDEAE2;
+  --ink-mid: #9A9888;
+  --ink-soft: #5C5A50;
+  --rule: rgba(43,168,138,0.14);
+  --surface: #1A1918;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-b);
+  font-size: 16px;
+  line-height: 1.75;
+  padding: 0 16px;
+}
+
+nav {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 28px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  font-family: var(--font-d);
+  font-size: 20px;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.nav-back {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: auto;
+  letter-spacing: 0.02em;
+}
+.nav-back:hover { color: var(--teal); }
+
+main {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding-block: 56px 96px;
+}
+
+.doc-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc-header h1 {
+  font-family: var(--font-d);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+.doc-meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.doc-intro {
+  background: var(--surface);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 24px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: var(--font-d);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--ink-mid);
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+p:last-child { margin-bottom: 0; }
+
+ul {
+  color: var(--ink-mid);
+  font-size: 15px;
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+
+li { margin-bottom: 6px; }
+
+a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--teal-soft); }
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 48px;
+}
+
+.contact-box h2 { margin-bottom: 8px; }
+.contact-box p { margin-bottom: 6px; }
+
+footer {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+footer a { color: var(--ink-soft); text-decoration: none; }
+footer a:hover { color: var(--teal); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 32px 0;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Recall</a>
+  <a class="nav-back" href="/">← Back to site</a>
+</nav>
+
+<main>
+  <div class="doc-header">
+    <h1>Terms of Use</h1>
+    <p class="doc-meta">Effective date: October 7, 2026 &nbsp;·&nbsp; Last updated: October 7, 2026</p>
+  </div>
+
+  <div class="doc-intro">
+    These Terms of Use govern your use of the Recall app and website. By using Recall, you agree to these terms. Please read them - we've kept them as plain as possible.
+  </div>
+
+  <section>
+    <h2>1. About Recall</h2>
+    <p>Recall is a mobile app that helps you retain the concepts, themes, and principles from the books you read - so what you learn actually sticks. It is operated by Recall ("we," "us," or "our"). For questions, contact us at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>2. Eligibility</h2>
+    <p>You must be at least 13 years old to use Recall. By using the app, you represent that you meet this requirement. If you are under 18, you should have your parent or guardian review these terms.</p>
+  </section>
+
+  <section>
+    <h2>3. Your account</h2>
+    <p>When you create a Recall account, you are responsible for keeping your login credentials secure and for all activity that occurs under your account. If you suspect unauthorized access, contact us immediately at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a>.</p>
+    <p>You may not create an account on behalf of someone else without their permission.</p>
+  </section>
+
+  <section>
+    <h2>4. What you can do with Recall</h2>
+    <p>We grant you a personal, non-exclusive, non-transferable license to use Recall for your own personal, non-commercial reading and reflection. You may:</p>
+    <ul>
+      <li>Add books, write notes, and save reflections for your personal use</li>
+      <li>Access your reading history and data across your devices</li>
+      <li>Share thoughts or quotes from within the app where sharing features are provided</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. What you may not do</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use Recall for any unlawful purpose or in violation of these terms</li>
+      <li>Reproduce, distribute, or sell any part of Recall without our written permission</li>
+      <li>Attempt to reverse-engineer, decompile, or access the source code of the app</li>
+      <li>Use automated tools to scrape, crawl, or extract data from Recall</li>
+      <li>Impersonate another person or misrepresent your affiliation with any person or entity</li>
+      <li>Upload or transmit content that is harmful, abusive, or infringes on others' rights</li>
+      <li>Interfere with or disrupt the security or integrity of Recall or its underlying systems</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Your content</h2>
+    <p>The notes and reflections you write in Recall are yours. We do not claim ownership over your personal content.</p>
+    <p>By using Recall, you grant us a license to store, display, and use your content in the following ways:</p>
+    <ul>
+      <li>To provide the Recall service to you across your devices</li>
+      <li>To power AI features within the app - including surfacing connections across your library (cross-book context) and personalized insights - using your content in anonymized or aggregated form</li>
+      <li>To improve Recall's models and features over time, using data that cannot be traced back to you individually</li>
+    </ul>
+    <p>We do not sell your content to third parties. If we introduce in-app advertising in the future, ads may be informed by your in-app activity - including reading categories, notes, and reflections - to make them more relevant to you. This data stays within Recall and is not shared with or sold to advertisers.</p>
+    <p>You are responsible for ensuring that any content you add to Recall (such as book covers or quotes) does not infringe on third-party intellectual property rights.</p>
+  </section>
+
+  <section>
+    <h2>7. Intellectual property</h2>
+    <p>Recall and all of its content, features, and design - including the name, logo, interface, and underlying technology - are owned by us and protected by applicable intellectual property laws.</p>
+    <p>Nothing in these Terms gives you the right to use our brand name, trademarks, logos, or other proprietary information without our prior written consent.</p>
+  </section>
+
+  <section>
+    <h2>8. Third-party services</h2>
+    <p>Recall uses third-party services to operate, including Supabase (database) and Apple's App Store (distribution). Your use of those services is subject to their own terms and privacy policies. We are not responsible for third-party services.</p>
+    <p>Recall may display links to third-party websites (such as book information pages). We do not endorse and are not responsible for the content of those sites.</p>
+  </section>
+
+  <section>
+    <h2>9. Disclaimer of warranties</h2>
+    <p>Recall is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the app will be error-free, uninterrupted, or free of harmful components. Your use of Recall is at your own risk.</p>
+  </section>
+
+  <section>
+    <h2>10. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, we will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of Recall - including loss of data, loss of profits, or service interruptions - even if we have been advised of the possibility of such damages.</p>
+    <p>Our total liability to you for any claims arising under these Terms will not exceed the amount you paid us in the 12 months preceding the claim (or $10 if you haven't paid us anything).</p>
+  </section>
+
+  <section>
+    <h2>11. Termination</h2>
+    <p>You may stop using Recall and delete your account at any time. We may suspend or terminate your access if you violate these Terms, with or without notice.</p>
+    <p>Upon termination, your license to use Recall ends. Sections that should survive termination (such as intellectual property, disclaimer of warranties, and limitation of liability) will continue to apply.</p>
+  </section>
+
+  <section>
+    <h2>12. Governing law and dispute resolution</h2>
+    <p>These Terms are governed by the laws of the State of New York, without regard to conflict of law principles.</p>
+    <p>Before filing a formal claim, we ask that you contact us at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a> to try to resolve the issue informally. Most concerns can be sorted out quickly this way.</p>
+    <p>If a dispute cannot be resolved informally, you and Recall agree to resolve it through binding individual arbitration under the rules of the American Arbitration Association (AAA), rather than in court. This means disputes are resolved one-on-one - not through class actions or jury trials. Either party may bring a small claims court action as an alternative to arbitration for qualifying claims.</p>
+    <p>Nothing in this section prevents either party from seeking emergency injunctive relief in a court of competent jurisdiction to prevent irreparable harm.</p>
+  </section>
+
+  <section>
+    <h2>13. Changes to these terms</h2>
+    <p>We may update these Terms from time to time. If we make material changes, we will notify you by email or through a notice in the app. Continued use of Recall after the updated Terms take effect constitutes your acceptance.</p>
+  </section>
+
+  <div class="contact-box">
+    <h2>Questions?</h2>
+    <p>We're a small team and we read every message. Reach us at:</p>
+    <p><a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a></p>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Recall. All rights reserved.</span>
+  <span><a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Use</a></span>
+</footer>
+
+</body>
+</html>

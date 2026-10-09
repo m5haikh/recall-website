@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Recall</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap">
+
+  <style>
+:root {
+  --cream: #FDF6EE;
+  --teal: #1A6B5A;
+  --teal-soft: #2A8870;
+  --sand: #E8C99A;
+  --ink: #1E1E1A;
+  --ink-mid: #5C5C55;
+  --ink-soft: #A0A090;
+  --rule: rgba(26,107,90,0.13);
+  --surface: #FFFFFF;
+  --font-d: 'DM Serif Display', Georgia, serif;
+  --font-b: 'DM Sans', system-ui, sans-serif;
+  --w: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #111110;
+    --teal: #2BA88A;
+    --teal-soft: #3CC4A2;
+    --sand: #C4A46A;
+    --ink: #EDEAE2;
+    --ink-mid: #9A9888;
+    --ink-soft: #5C5A50;
+    --rule: rgba(43,168,138,0.14);
+    --surface: #1A1918;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #111110;
+  --teal: #2BA88A;
+  --teal-soft: #3CC4A2;
+  --sand: #C4A46A;
+  --ink: #EDEAE2;
+  --ink-mid: #9A9888;
+  --ink-soft: #5C5A50;
+  --rule: rgba(43,168,138,0.14);
+  --surface: #1A1918;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-b);
+  font-size: 16px;
+  line-height: 1.75;
+  padding: 0 16px;
+}
+
+nav {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 28px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  font-family: var(--font-d);
+  font-size: 20px;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.nav-back {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: auto;
+  letter-spacing: 0.02em;
+}
+.nav-back:hover { color: var(--teal); }
+
+main {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding-block: 56px 96px;
+}
+
+.doc-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc-header h1 {
+  font-family: var(--font-d);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+.doc-meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.doc-intro {
+  background: var(--surface);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 24px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: var(--font-d);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--ink-mid);
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+p:last-child { margin-bottom: 0; }
+
+ul {
+  color: var(--ink-mid);
+  font-size: 15px;
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+
+li { margin-bottom: 6px; }
+
+a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--teal-soft); }
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 48px;
+}
+
+.contact-box h2 { margin-bottom: 8px; }
+.contact-box p { margin-bottom: 6px; }
+
+footer {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+footer a { color: var(--ink-soft); text-decoration: none; }
+footer a:hover { color: var(--teal); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 32px 0;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Recall</a>
+  <a class="nav-back" href="/">← Back to site</a>
+</nav>
+
+<main>
+  <div class="doc-header">
+    <h1>Privacy Policy</h1>
+    <p class="doc-meta">Effective date: October 7, 2026 &nbsp;·&nbsp; Last updated: October 7, 2026</p>
+  </div>
+
+  <div class="doc-intro">
+    Recall is built on a simple idea: your reading life is personal. We collect only what we need to make the app work and we don't sell your data to third parties.
+  </div>
+
+  <section>
+    <h2>1. Who we are</h2>
+    <p>Recall is a mobile reading app ("we," "us," or "our"). You can reach us at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>2. Information we collect</h2>
+    <p>We collect information in two ways:</p>
+    <p><strong>Information you give us directly:</strong></p>
+    <ul>
+      <li>Your email address, when you sign up for the waitlist or create an account</li>
+      <li>Books you add, notes you write, and reflections you save inside the app</li>
+      <li>Any feedback or messages you send us</li>
+    </ul>
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li>Basic usage data (which features you use, session duration) to help us improve the app</li>
+      <li>Device type and operating system version for debugging and compatibility</li>
+      <li>Crash reports if the app encounters an error</li>
+    </ul>
+    <p>We do not collect your location, contacts, camera, or microphone unless a specific feature requires it and you explicitly grant permission.</p>
+  </section>
+
+  <section>
+    <h2>3. How we use your information</h2>
+    <ul>
+      <li>To provide and maintain the Recall app and its features</li>
+      <li>To send you waitlist updates, product announcements, and occasional newsletters (you can unsubscribe at any time)</li>
+      <li>To understand how people use Recall so we can improve it</li>
+      <li>To respond to your questions and support requests</li>
+      <li>To improve Recall's AI features - including cross-book context (connecting themes and ideas across your library) and personalized recommendations - using anonymized, aggregated data</li>
+      <li>To display in-app advertising in the future. If and when we show ads, they may be informed by your in-app activity - including reading categories, notes, and reflections - to make them more relevant. We do not sell this data to third parties or use it to build a profile of you outside of Recall</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do not sell your personal data to third parties.</p>
+  </section>
+
+  <section>
+    <h2>4. How we store your information</h2>
+    <p>Your data is stored securely using <a href="https://supabase.com" target="_blank">Supabase</a>, a cloud database provider. Data is encrypted in transit and at rest. We retain your account data for as long as your account is active or as needed to provide services.</p>
+    <p>To request account deletion, email us at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a>. We will process deletion requests within 30 days, except where we are required to retain data for legal reasons.</p>
+  </section>
+
+  <section>
+    <h2>5. Sharing your information</h2>
+    <p>We do not sell, rent, or trade your personal information. We may share it only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> We use trusted third-party services to help operate Recall (such as Supabase for database hosting and Apple for app distribution). These providers access only what they need to perform their services and are contractually required to protect your data.</li>
+      <li><strong>Legal requirements:</strong> If required by law or to protect the rights, safety, or property of Recall or others.</li>
+      <li><strong>Business transfers:</strong> If Recall is acquired or merges with another company, your data may be transferred. We will notify you before this happens.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Your rights and choices</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access the personal information we hold about you</li>
+      <li>Update your account information (such as your email address) directly within the app</li>
+      <li>Request deletion of your account and associated data</li>
+      <li>Opt out of marketing emails at any time using the unsubscribe link</li>
+    </ul>
+    <p>To exercise any of these rights, email us at <a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>7. Children's privacy</h2>
+    <p>Recall is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+  </section>
+
+  <section>
+    <h2>8. Third-party links and services</h2>
+    <p>The app may contain links to third-party websites or services (such as book retailers or Wikipedia). We are not responsible for the privacy practices of those sites. We encourage you to review their privacy policies.</p>
+  </section>
+
+  <section>
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by email or through a notice in the app. The "last updated" date at the top reflects when changes were most recently made. Continued use of Recall after changes are posted constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <div class="contact-box">
+    <h2>Questions?</h2>
+    <p>We're a small team and we read every message. Reach us at:</p>
+    <p><a href="mailto:hello@readingrecall.com">hello@readingrecall.com</a></p>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Recall. All rights reserved.</span>
+  <span><a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Use</a></span>
+</footer>
+
+</body>
+</html>

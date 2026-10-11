@@ -48,6 +48,7 @@
 
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
+    --logo-filament: #E8C99A;
         --cream: #111110;
         --teal: #2BA88A;
         --teal-d: #1E8870;
@@ -64,6 +65,7 @@
     }
 
     :root[data-theme="dark"] {
+  --logo-filament: #E8C99A;
       --cream: #111110;
       --teal: #2BA88A;
       --teal-d: #1E8870;
@@ -108,7 +110,10 @@
       color: var(--teal);
       text-decoration: none;
       letter-spacing: -0.01em;
-    }
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
     .nav-back {
       font-size: 13px;
       color: var(--ink-soft);
@@ -196,7 +201,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCN4ZFKN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav>
-    <a class="nav-logo" href="/">Recall</a>
+    <a class="nav-logo" href="/"><svg class="nav-logo-icon" width="16" height="25" viewBox="18 16 84 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M47.5 117 C47.5 103 24 93 24 58 A36 36 0 0 1 96 58 C96 93 72.5 103 72.5 117"/><path d="M46 125 H74 M48.5 132 H71.5 M54.5 139 H65.5"/></g><path d="M50 117 V44 H60 A14 14 0 0 1 60 72 H56.5 L69.6 104.2 Q70 105.4 70 107 V117 M50 72 H56.5" stroke="var(--logo-filament, #C9A46C)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Recall</a>
     <a class="nav-back" href="/">← Back to site</a>
   </nav>
 

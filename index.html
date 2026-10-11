@@ -773,8 +773,9 @@ async function submitEmail(email) {
   // If Supabase not configured, store locally and succeed
   if (SUPABASE_KEY === 'YOUR_SUPABASE_ANON_KEY') {
     try { localStorage.setItem('recall_waitlist_email', email); } catch(e) {}
-    return { ok: true };
+    return { ok: true, status: 200, body: '' };
   }
+
   try {
     const res = await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}`, {
       method: 'POST',
@@ -786,10 +787,12 @@ async function submitEmail(email) {
       },
       body: JSON.stringify({ email, signed_up_at: new Date().toISOString() })
     });
+
     const body = await res.text().catch(() => '');
-    return { ok: res.ok, status: res.status, body };
+    const ok = res.ok || (res.status >= 200 && res.status < 300);
+    return { ok, status: res.status, body };
   } catch(err) {
-    return { ok: false, err };
+    return { ok: false, status: 0, body: '', err };
   }
 }
 
@@ -815,12 +818,15 @@ function wireForm(formId, emailId, btnId, statusId) {
       form.style.display = 'none';
       status.className = 'form-status ok';
       status.textContent = "You're on the list. We'll be in touch when your spot is ready.";
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'Join Waitlist';
-      status.className = 'form-status err';
-      status.textContent = 'Something went wrong - try again or email us at hello@readingrecall.com';
+      return;
     }
+
+    btn.disabled = false;
+    btn.textContent = 'Join Waitlist';
+    status.className = 'form-status err';
+    status.textContent = result.status === 409
+      ? "You're already on the list. We'll be in touch when your spot is ready."
+      : 'Something went wrong - try again or email us at hello@readingrecall.com';
   });
 }
 

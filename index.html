@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Password-reset emails can land on the home page (Supabase's default address).
+    // Send them straight to the reset page before anything else loads, so the
+    // one-time token never reaches analytics.
+    (function () {
+      var h = location.hash;
+      if (h && (h.indexOf('type=recovery') !== -1 || h.indexOf('error_code=') !== -1)) {
+        location.replace('/reset-password' + h);
+      }
+    })();
+  </script>
   <!-- Pinterest domain verification (must be in the page itself, not added through Tag Manager) -->
   <meta name="p:domain_verify" content="87e85a67e77443e93686f9493487f5af"/>
   <meta name="description" content="A calm reading companion that helps you remember and apply what you read, in about 5 minutes a day.">

@@ -492,6 +492,20 @@ nav {
 .feat-card h3 { font-size: 1.05rem; letter-spacing: -0.01em; color: var(--ink); }
 .feat-card p { font-size: 0.86rem; line-height: 1.65; color: var(--ink-mid); }
 
+
+/* ── INSIDE RECALL (app screens) ── */
+.screens { padding-block: var(--gap); border-top: 1px solid var(--rule); }
+.screens-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.screens figure { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+.phone { border-radius: 28px; overflow: hidden; border: 1px solid var(--rule); background: var(--surface); box-shadow: 0 28px 60px -28px rgba(28,35,64,0.28); }
+.phone img { display: block; width: 100%; height: auto; }
+.screens figcaption strong { display: block; font-weight: 500; color: var(--ink); font-size: 0.95rem; }
+.screens figcaption span { font-size: 0.84rem; color: var(--ink-mid); }
+@media (max-width: 840px) {
+  .screens-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 8px; }
+  .screens figure { flex: 0 0 62%; scroll-snap-align: start; }
+}
+
 /* ── DARK CTA ── */
 .dark-cta {
   background: #1C2340;
@@ -654,6 +668,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSIDE RECALL ── -->
+<section class="screens">
+  <div class="wrap">
+    <div class="features-head">
+      <span class="eyebrow">Inside Recall</span>
+      <h2>A few calm minutes, every day</h2>
+    </div>
+    <div class="screens-row">
+      <figure><div class="phone"><img src="/screens/clarity.webp" width="600" height="1224" alt="Clarity: a two-minute pause before reading" loading="lazy"></div><figcaption><strong>Clear your head</strong><span>Two minutes before you read.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/screens/library.webp" width="600" height="1224" alt="Library with a reading timer and your books" loading="lazy"></div><figcaption><strong>Read at your pace</strong><span>Your books and a gentle timer.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/screens/recall.webp" width="600" height="1224" alt="Talking through a book with Recall" loading="lazy"></div><figcaption><strong>Talk it through</strong><span>One idea, made yours.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/screens/discover.webp" width="600" height="1224" alt="Discover: books and films related to your reading" loading="lazy"></div><figcaption><strong>Find what&rsquo;s next</strong><span>Books, films and podcasts around your ideas.</span></figcaption></figure>
     </div>
   </div>
 </section>
